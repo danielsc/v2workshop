@@ -1,2 +1,3 @@
 data/nyctaxi.small
 named-outputs/*
+data/model/*

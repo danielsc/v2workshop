@@ -11,6 +11,7 @@
     <br>That should take you to VSCode and log you in to your Compute Instance.
 2. Once you are in, set your Python interpreter by hitting Shift-Ctrl-P (Windows) / Shift-Cmd-P (Mac) and then typing `Python: Select Interpreter`. 
     <br>![](img/select-interpreter.png)
+    <br>
     <br>Now select `azureml_py310_sdkv2`
     <br>![](img/azureml_py310_sdkv2.png)
 2. Start a terminal with `Terminal / New Terminal` and type the following:
@@ -51,4 +52,12 @@
     danielsc-rstudio   computeinstance  Stopped    STANDARD_DS11_V2
     danielsc-rstudio3  computeinstance  Stopped    STANDARD_DS11_V2
     danielscdemo       computeinstance  Running    STANDARD_DS12_V2
+    ```
+    <br>Now, install Scikit-Learn
+    ```
+    pip install sklearn
+    ```
+7. Clone this repo:
+    ```
+    git clone https://github.com/danielsc/v2workshop.git
     ```
