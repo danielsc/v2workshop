@@ -1,0 +1,11 @@
+$schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
+type: command
+
+code: src
+
+environment: azureml:AzureML-sklearn-1.0-ubuntu20.04-py38-cpu:23
+
+command: |
+  python test.py
+
+compute: azureml:danielscdemo
