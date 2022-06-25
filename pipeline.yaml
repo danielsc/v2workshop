@@ -1,0 +1,50 @@
+$schema: https://azuremlschemas.azureedge.net/latest/pipelineJob.schema.json
+
+type: pipeline
+
+jobs:
+
+  prep:
+    type: command
+
+    code: src
+
+    environment: azureml:AzureML-sklearn-1.0-ubuntu20.04-py38-cpu:23
+
+    command: |
+      python prep.py --input_csv ${{inputs.the_csv}} --output_tsv ${{outputs.the_tsv}}
+
+    compute: azureml:danielscdemo
+
+    inputs:
+      the_csv:
+        type: uri_file
+        path: data/titanic.csv
+
+    outputs:
+      the_tsv:
+        type: uri_file
+
+  train:
+    type: command
+
+    code: src
+
+    compute: azureml:danielscdemo
+
+    command: |
+      python train.py --input_tsv ${{inputs.input_tsv}} --output_model ${{outputs.output_model}} --test_json ${{outputs.test_json}}
+
+    inputs:
+      input_tsv:
+        type: uri_file
+        path: ${{parent.jobs.prep.outputs.the_tsv}}
+
+    outputs:
+      output_model:
+        type: mlflow_model
+      
+      test_json:
+        type: uri_file
+
+    environment: azureml:AzureML-sklearn-1.0-ubuntu20.04-py38-cpu:23

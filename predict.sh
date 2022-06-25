@@ -1,0 +1,1 @@
+mlflow models predict -m data/model -i data/test.json -t json

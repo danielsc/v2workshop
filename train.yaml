@@ -1,0 +1,24 @@
+$schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
+
+type: command
+
+code: src
+
+compute: azureml:danielscdemo
+
+command: |
+  python train.py --input_tsv ${{inputs.input_tsv}} --output_model ${{outputs.output_model}} --test_json ${{outputs.test_json}}
+
+inputs:
+  input_tsv:
+    type: uri_file
+    path: data/titanic.tsv
+
+outputs:
+  output_model:
+    type: mlflow_model
+  
+  test_json:
+    type: uri_file
+
+environment: azureml:AzureML-sklearn-1.0-ubuntu20.04-py38-cpu:23

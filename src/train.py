@@ -22,7 +22,7 @@ df[cols]=df[cols].fillna(df.mode().iloc[0])
 df = pd.get_dummies(df, columns = ["Sex","Embarked"])
 df = df.astype("float64")
 
-df.drop(["Survived"], axis=1).head(10).to_json("data/test.json", orient='split')
+df.drop(["Survived"], axis=1).head(10).to_json(args.test_json, orient='split')
 
 X_train, X_test, Y_train, Y_test = train_test_split(df.drop(["Survived"], axis=1).values,
                                                     df["Survived"],
