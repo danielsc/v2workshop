@@ -39,8 +39,8 @@
 8. Open the v2workshop folder in VSCode
    <br>![image](https://user-images.githubusercontent.com/8079390/176018992-fe0d79b0-f9f9-4301-b42f-e995d86abe8c.png)
    <br>![image](https://user-images.githubusercontent.com/8079390/176017698-4521374c-4563-4ee4-a1b1-c6d5f6ba2d9f.png)
-   This will reload the folder in VSCode
-2. Once you are in, set your Python interpreter by hitting Shift-Ctrl-P (Windows) / Shift-Cmd-P (Mac) and then typing `Python: Select Interpreter`. 
+   <br>This will reload the folder in VSCode
+2. Last, set your Python interpreter by hitting Shift-Ctrl-P (Windows) / Shift-Cmd-P (Mac) and then typing `Python: Select Interpreter`. 
     <br>![](img/select-interpreter.png)
     <br>
     <br>Now select `azureml_py310_sdkv2`
