@@ -29,29 +29,9 @@
     ```
     <br>This should give you a list like this:
     ```
-    Name               Compute type     State      Instance type
-    -----------------  ---------------  ---------  ---------------------
-    raycluster         amlcompute       Succeeded  STANDARD_DS3_V2
-    daniel-big         amlcompute       Succeeded  STANDARD_D15_V2
-    goazurego          amlcompute       Succeeded  STANDARD_DS3_V2
-    danielscprivate    computeinstance  Stopped    STANDARD_DS3_V2
-    gpu                amlcompute       Succeeded  STANDARD_NC6
-    d15-low-prio       amlcompute       Succeeded  STANDARD_D15_V2
-    danielscnc12       computeinstance  Stopped    STANDARD_NC12
-    v100lowpri         amlcompute       Succeeded  STANDARD_NC6S_V3
-    t4-lowpri          amlcompute       Succeeded  STANDARD_NC16AS_T4_V3
-    cpu-cluster        amlcompute       Succeeded  STANDARD_DS3_V2
-    level5             amlcompute       Succeeded  STANDARD_NC24
-    daniel-d15         amlcompute       Succeeded  STANDARD_D15_V2
-    danielsc1          computeinstance  Stopped    STANDARD_DS3_V2
-    gpu-cluster        amlcompute       Succeeded  STANDARD_NC6
-    danielsc3big       computeinstance  Running    STANDARD_D15_V2
-    danielsc3          computeinstance  Stopped    STANDARD_F2S_V2
-    amlcomp            amlcompute       Succeeded  STANDARD_NC6
-    danielsc-vnet      computeinstance  Stopped    STANDARD_D13_V2
-    danielsc-rstudio   computeinstance  Stopped    STANDARD_DS11_V2
-    danielsc-rstudio3  computeinstance  Stopped    STANDARD_DS11_V2
-    danielscdemo       computeinstance  Running    STANDARD_DS12_V2
+    Name       Compute type     State    Instance type
+    ---------  ---------------  -------  ----------------
+    danielsc4  computeinstance  Running  STANDARD_DS12_V2
     ```
     <br>Now, install Scikit-Learn
     ```
