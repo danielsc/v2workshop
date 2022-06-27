@@ -15,6 +15,14 @@
     <br>Now select `azureml_py310_sdkv2`
     <br>![](img/azureml_py310_sdkv2.png)
 2. Start a terminal with `Terminal / New Terminal` and type the following:
+    <br>Make sure conda is working
+    ```
+    conda init bash
+    ```
+    <br>Then either close the Terminal and open a new one or just run:
+    ```
+    conda activate azureml_py310_sdkv2
+    ```
     <br>This will make the CLI output prettier
     ```
     az config set core.output=yamlc
