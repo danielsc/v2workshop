@@ -9,19 +9,10 @@
 2. Once the compute instance has been created, click on the VSCode link
     <br>![](img/vscode-launch.png)
     <br>That should take you to VSCode and log you in to your Compute Instance.
-2. Once you are in, set your Python interpreter by hitting Shift-Ctrl-P (Windows) / Shift-Cmd-P (Mac) and then typing `Python: Select Interpreter`. 
-    <br>![](img/select-interpreter.png)
-    <br>
-    <br>Now select `azureml_py310_sdkv2`
-    <br>![](img/azureml_py310_sdkv2.png)
 2. Start a terminal with `Terminal / New Terminal` and type the following:
     <br>Make sure conda is working
     ```
     conda init bash
-    ```
-    <br>Then either close the Terminal and open a new one or just run:
-    ```
-    conda activate azureml_py310_sdkv2
     ```
     <br>This will make the CLI output prettier
     ```
@@ -41,11 +32,20 @@
     ---------  ---------------  -------  ----------------
     danielsc4  computeinstance  Running  STANDARD_DS12_V2
     ```
-    <br>Now, install Scikit-Learn
-    ```
-    pip install sklearn
-    ```
 7. Clone this repo:
     ```
     git clone https://github.com/danielsc/v2workshop.git
+    ```
+8. Open the v2workshop folder in VSCode
+   <br>![image](https://user-images.githubusercontent.com/8079390/176018992-fe0d79b0-f9f9-4301-b42f-e995d86abe8c.png)
+   <br>![image](https://user-images.githubusercontent.com/8079390/176017698-4521374c-4563-4ee4-a1b1-c6d5f6ba2d9f.png)
+   This will reload the folder in VSCode
+2. Once you are in, set your Python interpreter by hitting Shift-Ctrl-P (Windows) / Shift-Cmd-P (Mac) and then typing `Python: Select Interpreter`. 
+    <br>![](img/select-interpreter.png)
+    <br>
+    <br>Now select `azureml_py310_sdkv2`
+    <br>![](img/azureml_py310_sdkv2.png)
+    <br>Then start a new Terminal and install Scikit-Learn, etc.
+    ```
+    pip install sklearn pandas mlflow azureml-mlflow
     ```
