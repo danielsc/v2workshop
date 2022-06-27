@@ -1,0 +1,12 @@
+$schema: https://azuremlschemas.azureedge.net/latest/managedOnlineDeployment.schema.json
+
+type: managed
+name: red
+endpoint_name: danielsc-v2-workshop
+
+model:
+  type: mlflow_model
+  path: ../data/model
+
+instance_type: Standard_F2s_v2
+instance_count: 1
