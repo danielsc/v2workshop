@@ -7,7 +7,7 @@ jobs:
   prep:
     type: command
 
-    code: src
+    code: ../src
 
     environment: azureml:AzureML-sklearn-1.0-ubuntu20.04-py38-cpu:23
 
@@ -19,7 +19,7 @@ jobs:
     inputs:
       the_csv:
         type: uri_file
-        path: data/titanic.csv
+        path: ../data/titanic.csv
 
     outputs:
       the_tsv:
@@ -28,7 +28,7 @@ jobs:
   train:
     type: command
 
-    code: src
+    code: ../src
 
     compute: azureml:danielscdemo
 
