@@ -19,6 +19,4 @@ outputs:
   the_tsv:
     type: uri_file
 
-
-
   
