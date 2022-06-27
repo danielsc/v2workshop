@@ -4,6 +4,7 @@ import mlflow
 from sklearn.ensemble import GradientBoostingClassifier 
 from sklearn.model_selection import train_test_split
 from mlflow.models import infer_signature
+import shutil, os 
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--input_tsv", default="data/titanic.tsv")   # input folder
@@ -37,4 +38,18 @@ acc_grad_boost = round(grad_boost.score(X_train, Y_train) * 100, 2)
 
 signature = infer_signature(model_input=df.drop(["Survived"], axis=1).head(10))
 
+
+dir = os.listdir(args.output_model)
+if len(dir) > 0:
+    shutil.rmtree(args.output_model)
+
 mlflow.sklearn.save_model(grad_boost, args.output_model, signature=signature)
+
+result = mlflow.evaluate(
+    args.output_model,
+    df,
+    targets="Survived",
+    model_type="classifier",
+    dataset_name="test",
+    evaluators=["default"],
+)

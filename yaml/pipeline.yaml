@@ -1,6 +1,7 @@
 $schema: https://azuremlschemas.azureedge.net/latest/pipelineJob.schema.json
 
 type: pipeline
+compute: azureml:cpu-cluster
 
 jobs:
 
@@ -13,8 +14,6 @@ jobs:
 
     command: |
       python prep.py --input_csv ${{inputs.the_csv}} --output_tsv ${{outputs.the_tsv}}
-
-    compute: azureml:danielscdemo
 
     inputs:
       the_csv:
@@ -29,8 +28,6 @@ jobs:
     type: command
 
     code: ../src
-
-    compute: azureml:danielscdemo
 
     command: |
       python train.py --input_tsv ${{inputs.input_tsv}} --output_model ${{outputs.output_model}} --test_json ${{outputs.test_json}}

@@ -8,7 +8,7 @@ environment: azureml:AzureML-sklearn-1.0-ubuntu20.04-py38-cpu:23
 command: |
   python prep.py --input_csv ${{inputs.the_csv}} --output_tsv ${{outputs.the_tsv}}
 
-compute: azureml:danielscdemo
+compute: azureml:cpu-cluster
 
 inputs:
   the_csv:

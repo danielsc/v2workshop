@@ -47,5 +47,5 @@
     <br>![](img/azureml_py310_sdkv2.png)
     <br>Then start a new Terminal and install Scikit-Learn, etc.
     ```
-    pip install sklearn pandas mlflow azureml-mlflow
+    pip install -r src/requirements.txt 
     ```

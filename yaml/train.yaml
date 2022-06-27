@@ -4,9 +4,10 @@ type: command
 
 code: ../src
 
-compute: azureml:danielscdemo
+compute: azureml:cpu-cluster
 
 command: |
+  pip install -r requirements.txt
   python train.py --input_tsv ${{inputs.input_tsv}} --output_model ${{outputs.output_model}} --test_json ${{outputs.test_json}}
 
 inputs:
