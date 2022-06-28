@@ -50,6 +50,9 @@
     pip install -r src/requirements.txt 
     ```
 ## Troubleshooting
+
+**Also see reported issues here: https://github.com/danielsc/v2workshop/issues**
+
 1. Cannot find resource group / workspace
     <br>If `az ml compute list`
     <br>gives you the error `resource group could not be found`
@@ -67,4 +70,5 @@
     <br>![](img/jupyter-terminal.png)
     <br>![](img/az-login-identity.png)
 
-    
+
+
