@@ -2,7 +2,7 @@ $schema: https://azuremlschemas.azureedge.net/latest/managedOnlineDeployment.sch
 
 type: managed
 name: red
-endpoint_name: danielsc-v2-workshop
+endpoint_name: danielsc-v2-workshop2
 
 model:
   type: mlflow_model
