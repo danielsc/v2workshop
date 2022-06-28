@@ -49,3 +49,22 @@
     ```
     pip install -r src/requirements.txt 
     ```
+## Troubleshooting
+1. Cannot find resource group / workspace
+    <br>If `az ml compute list`
+    <br>gives you the error `resource group could not be found`
+    <br>Then you need to set your default subscription with 
+    ```
+        az account set -s <subscription_id>
+    ```
+2. When trying to `Python: Select Interpreter` no envrionments are show.
+    <br>In some cases, hitting the refresh button on the top right
+    <br>![](img/refresh_environments.png)
+
+2. When `az login --identity` does not succeed
+    <br>In this case, you will need to log in to the compute instance via jupyter
+    <br>![](img/jupyter.png)
+    <br>![](img/jupyter-terminal.png)
+    <br>![](img/az-login-identity.png)
+
+    
