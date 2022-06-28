@@ -58,7 +58,7 @@
         az account set -s <subscription_id>
     ```
 2. When trying to `Python: Select Interpreter` no envrionments are show.
-    <br>In some cases, hitting the refresh button on the top right
+    <br>In some cases, hitting the refresh button on the top right has helped.
     <br>![](img/refresh_environments.png)
 
 2. When `az login --identity` does not succeed
